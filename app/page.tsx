@@ -11,7 +11,7 @@ import {AiFillEye, AiFillYoutube} from 'react-icons/ai'
 import {FiExternalLink, FiLoader} from 'react-icons/fi'
 import SocialLink from "./components/SocialLink";
 import Link from "next/link";
-import { BsTrash } from "react-icons/bs";
+import { BsMusicNote, BsTrash } from "react-icons/bs";
 import {FaHeart, FaCommentAlt} from "react-icons/fa"
 
 
@@ -232,10 +232,9 @@ export default function Home() {
         <div className="flex justify-center items-center gap-4">
           <SocialLink link="/ytmp4" icon={AiFillYoutube} iconSize={64}/>
           <SocialLink link="/rumble">
-            <Image  width={36} height={36} src={RumbleIcon} alt="Rumble Icon"/>
+            <Image width={36} height={36} src={RumbleIcon} alt="Rumble Icon"/>
           </SocialLink>
-          <SocialLink link="/ytmp3">
-          <Image width={48} height={48} src={YTMusicIcon} alt="Youtube Music Icon"/>
+          <SocialLink icon={BsMusicNote} link="/ytmp3">
           </SocialLink>
         </div>
       </section>
