@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    --highlight: #717178;
+    --border: #27272a;
+    --bg: #09090b;
+}
+
+body {
+    color: white;
+    background-color: var(--bg);
+}
