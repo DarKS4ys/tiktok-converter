@@ -235,7 +235,7 @@ export default function Home() {
           <hr className="border-[--border]"/>
         <div className="flex justify-center items-center gap-4">
           <SocialLink link="https://youtube-converter-six.vercel.app" icon={AiFillYoutube} iconSize={64}/>
-          <SocialLink link="rumble-converter.vercel.app">
+          <SocialLink link="https://rumble-converter.vercel.app">
             <Image width={36} height={36} src={RumbleIcon} alt="Rumble Icon"/>
           </SocialLink>
           <SocialLink iconSize={36} icon={BsMusicNote} link="https://mp3-converter-one.vercel.app">
