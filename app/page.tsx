@@ -226,7 +226,7 @@ export default function Home() {
                   setInputValue("")
                 }}>
                   <p className="group-hover:opacity-0 transition">Remove</p>
-                  <BsTrash className="group-hover:-translate-x-7 transition group-hover:scale-125"/>
+                  <BsTrash className="group-hover:-translate-x-8 transition group-hover:scale-125"/>
                 </Button>
               </div>
             </div>
