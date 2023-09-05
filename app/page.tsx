@@ -11,7 +11,7 @@ import {AiFillEye, AiFillYoutube} from 'react-icons/ai'
 import {FiExternalLink, FiLoader} from 'react-icons/fi'
 import SocialLink from "./components/SocialLink";
 import Link from "next/link";
-import { BsMusicNote, BsTrash } from "react-icons/bs";
+import {BsMusicNote, BsTrash } from "react-icons/bs";
 import {FaHeart, FaCommentAlt} from "react-icons/fa"
 
 
@@ -213,6 +213,10 @@ export default function Home() {
 
                 { defaultQuality ? 
                   <Download definition={'SD'} downloadUrl={defaultQuality} quality={'SD Quality'}></Download>
+                : null}
+
+                { videoMusic ? 
+                <Download definition={'MP3'} downloadUrl={videoMusic} quality={'Audio Only'}></Download>  
                 : null}
 
                 <Button 
