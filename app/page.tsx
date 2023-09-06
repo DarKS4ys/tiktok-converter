@@ -140,12 +140,12 @@ export default function Home() {
           />
           <Button
             className={clsx("!w-36", {
-              "cursor-not-allowed hover:bg-transparent text-[--border] hover:ring-offset-0 hover:ring-0": inputValue === "",
+              "cursor-not-allowed hover:bg-transparent text-[--border] hover:ring-offset-0 hover:ring-0": inputValue === "" || isLoading,
             })}
             type="submit"
             disabled={inputValue === ""}
           >
-            {inputValue === "" ? "Empty" : "Search"}
+            {isLoading ? 'Loading...' : inputValue === "" ? "Empty" : "Search"}
           </Button>
         </form>
 
@@ -157,14 +157,14 @@ export default function Home() {
           <>
             <div className="md:items-start md:justify-start md:flex-row flex flex-col gap-4 items-center justify-center">
               <div className="flex flex-col gap-3 w-56">
-              <Link className="w-56 h-80" target="_blank" href={inputValue || "cantfindvideo"}>
+              <Link className="pt-[0.44rem] w-56 h-80" target="_blank" href={inputValue || "cantfindvideo"}>
                   <div className="relative group">
                       <Image
                         alt="Video Thumbnail"
                         src={thumbnailUrl || placeholderImageUrl}
                         width={640}
                         height={480}
-                        className="w-56 h-80"
+                        className="w-56 h-80 transition group-hover:ring-offset-4 group-hover:ring-4 ring-[--border] ring-offset-[--bg] border border-[--border] rounded-lg"
                       />
                     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100">
@@ -173,7 +173,7 @@ export default function Home() {
                   </div>
                 </Link>
                 { videoTitle ?
-                 <h1 className="md:text-2xl font-semibold text-lg overflow-hidden whitespace-nowrap">
+                 <h1 className="pt-2 md:text-2xl font-semibold text-lg overflow-hidden whitespace-nowrap">
                  {videoTitle.length > 14
                    ? `${videoTitle.slice(0, 12)}...`
                   : videoTitle}
